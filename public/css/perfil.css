@@ -1,0 +1,847 @@
+/* PARAMETROS DE VARIABLES REUTILIZABLES */
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: rgb(61, 68, 73);
+  --third-color: #000;
+  --hightlight-color: #e12516;
+  --bg-cpanl: #f0eeee;
+  --bg-form: #ffffff;
+  --color-gray: #cccccc;
+  --color-li: #575f64;
+
+  --medioRGBA: rgba(0, 0, 0, 0.5);
+  --altoRGBA: rgba(0, 0, 0, 0.8);
+  --bajoRGBA: rgba(0, 0, 0, 0.3);
+  --muyBajoRGBA: rgba(0, 0, 0, 0.2);
+
+  --btn-primary: #5dbcd2;
+  --btn-second: #e12516;
+  --btn-disable: #434343;
+  --btn-border: 1px solid var(--primary-color);
+  --btn-edit: #5dbcd2;
+  --btn-delet: #e12516;
+
+  --gm-status-avalible-color: greenyellow;
+  --gm-status-away-color: lightsalmon;
+  --gm-status-offline-color: lightgray;
+
+  --gm-padding: 12px;
+  --gm-padding-s: 6px;
+  --gm-padding-xs: 2px;
+
+  --gm-font-roboto: "Roboto", sans-serif;
+  --gm-font-oswald: "Oswald", sans-serif;
+
+  --gm-border-radius: 3px;
+
+  --gm-background-color-container: #000000;
+  --gm-border-color: var(--secondary-color);
+  --gm-bg-color: var(--hightlight-color);
+  --gm-text-color: var(--primary-color);
+  --gm-text-color-dark: var(--third-color);
+  --gm-bg-active-button: var(--hightlight-color);
+  --gm-text-color-active-button: var(--primary-color);
+  --gm-hover-cell-color: var(--hightlight-color);
+  --gm-even-row-color: var(--secondary-color);
+  --gm-focus-color: var(--hightlight-color);
+  --gm-input-background-color: var(--secondary-color);
+  --gm-input-color: var(--primary-color);
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* PARAMETROS BASICO PARA LA PAGINAS WEB */
+/*-------------------------------------------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--primary-color);
+  background-color: var(--gm-background-color-container);
+  font-family: var(--gm-font-roboto);
+  display: flex;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border-radius: var(--gm-border-radius);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--gm-font-oswald);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.icon-activo {
+  background-color: var(--gm-bg-color);
+  border-radius: var(--gm-border-radius);
+  color: var(--gm-text-color);
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* ESTILOS PARA LA SECTION DE CLASES REUTILIZABLES */
+/*-------------------------------------------------------------------------------------------*/
+.material-icons {
+  font-size: 16px;
+}
+.active {
+  background-color: var(--gm-bg-color);
+  border-radius: var(--gm-border-radius);
+}
+.btn {
+  padding: var(--gm-padding-s);
+  border-radius: var(--gm-border-radius);
+  color: var(--primary-color);
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: 1s;
+  font-family: var(--gm-font-oswald);
+}
+.btn-primary {
+  background-color: var(--btn-second);
+  color: var(--gm-text-color-active-button);
+}
+.btn-second {
+  background-color: var(--btn-primary);
+  text-align: center;
+}
+.btn-border {
+  text-decoration: none;
+  background-color: transparent;
+  border: var(--btn-border);
+}
+.btn-edit {
+  padding: 6px 10px;
+  background-color: var(--btn-edit);
+  color: var(--gm-text-color);
+  border: 1px solid var(--gm-text-color-dark);
+}
+
+.btn-delet {
+  padding: 6px 10px;
+  background-color: var(--btn-delet);
+  color: var(--gm-text-color);
+  border: 1px solid var(--gm-text-color-dark);
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* ESTILOS PARA LA SECTION DE MULTIPLES SELECION */
+/*-------------------------------------------------------------------------------------------*/
+footer .footer-tools .pages ul li button,
+header .header-tools .tools ul li button {
+  color: var(--gm-text-color-active-button);
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: var(--gm-border-radius);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+footer .footer-tools .pages ul li button:hover,
+header .header-tools .tools ul li button:hover {
+  background-color: var(--gm-bg-active-button);
+  color: var(--gm-text-color-active-button);
+}
+
+footer .footer-tools .pages ul li button,
+footer .footer-tools .pages ul li span,
+header .header-tools .tools ul li button {
+  padding: var(--gm-padding-s) var(--gm-padding);
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* ESTILOS PARA LA SECTION DE EL NAVEGATION */
+/*-------------------------------------------------------------------------------------------*/
+section.menu-left {
+  background-color: var(--gm-background-color-container);
+  color: var(--secondary-color);
+  width: auto;
+}
+
+header.menu-header {
+  background-image: url("../static/img/red.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--gm-background-color-container);
+  color: var(--primary-color);
+  width: 300px;
+  height: 221px;
+  text-align: center;
+}
+
+header.menu-header .user-pic {
+  padding: 16px;
+}
+
+header.menu-header .user-pic img {
+  width: 80px;
+  border-radius: 40px;
+}
+
+header.menu-header .information-user p {
+  padding: var(--gm-padding-xs);
+}
+
+header.menu-header .information-user div.links-menu {
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 1px solid var(--primary-color);
+  padding: var(--gm-padding);
+}
+
+header.menu-header .information-user div.links-menu a {
+  cursor: pointer;
+  display: block;
+  background-color: transparent;
+}
+
+header.menu-header .information-user div.links-menu a:hover {
+  animation: btn 2s linear forwards;
+  -webkit-animation: btn 1.5s linear forwards;
+}
+
+header.menu-header .information-user div.links-menu a span {
+  font-size: 24px;
+}
+
+@keyframes btn {
+  0% {
+    border-left: 1px solid var(--primary-color);
+  }
+  25% {
+    border-left: 1px solid var(--primary-color);
+    border-top: 1px solid var(--primary-color);
+    background-color: var(--hightlight-color);
+  }
+  75% {
+    border-left: 1px solid var(--primary-color);
+    border-top: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+    background-color: var(--btn-primary);
+  }
+  100% {
+    border-left: 1px solid var(--primary-color);
+    border-top: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    background-color: var(--altoRGBA);
+  }
+}
+
+nav.user-menu {
+  max-height: 100%;
+}
+
+nav.user-menu ul li {
+  color: var(--color-li);
+  font-size: 18px;
+  cursor: pointer;
+  padding: var(--gm-padding-s);
+  font-family: var(--gm-font-roboto);
+}
+
+.cerrar-sesion {
+  position: relative;
+  z-index: 100;
+  text-align: center;
+  padding: var(--gm-padding);
+  border-radius: var(--gm-border-radius);
+  color: var(--gm-text-color);
+  border-top: 1px solid var(--hightlight-color);
+}
+
+.cerrar-sesion a {
+  margin: var(--gm-padding-s);
+  display: block;
+}
+
+.cerrar-sesion a:hover {
+  background-color: var(--btn-primary);
+}
+
+.add-game {
+  max-height: 300px;
+  overflow: auto;
+}
+.user-game {
+  display: none;
+  max-height: 300px;
+  overflow: auto;
+}
+.perfil-li {
+  display: flex;
+  justify-content: space-between;
+  color: var(--primary-color) !important;
+}
+
+.perfil-li span {
+  font-size: 24px;
+}
+
+.add-game::-webkit-scrollbar {
+  width: 5px;
+}
+
+.add-game::-webkit-scrollbar-thumb {
+  background-color: var(--gm-bg-color);
+  border-radius: 5px;
+}
+.user-game::-webkit-scrollbar {
+  width: 5px;
+}
+
+.user-game::-webkit-scrollbar-thumb {
+  background-color: var(--gm-bg-color);
+  border-radius: 5px;
+}
+
+nav.user-menu ul li a {
+  display: block;
+  padding: var(--gm-padding-xs);
+  color: var(--color-gray);
+  font-family: var(--gm-font-oswald);
+}
+
+nav.user-menu ul li span {
+  color: var(--hightlight-color);
+}
+
+section.menu-right {
+  width: 100%;
+}
+
+.list-user {
+  color: var(--color-li) !important;
+}
+.cpanel-submenu li a {
+  color: var(--color-li) !important;
+}
+
+.list-genero__games li {
+  display: inline-block;
+  padding: 3px;
+}
+
+.list-genero__games li::after {
+  content: ",";
+}
+.list-genero__games li:last-child::after {
+  content: "";
+}
+
+section.menu-compact {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+}
+
+section.menu-compact nav ul li {
+  display: block;
+  padding: var(--gm-padding);
+  transition: all 0.4s ease-in-out;
+  border-bottom: 1px solid var(--secondary-color);
+  cursor: pointer;
+}
+
+section.menu-compact nav ul li:hover {
+  color: var(--primary-color);
+  background-color: var(--btn-second);
+}
+
+section.menu-compact nav ul li span {
+  font-size: 24px;
+}
+
+.initial-user {
+  padding: 18px 0 !important;
+  background-color: var(--gm-input-background-color) !important;
+  color: var(--gm-text-color);
+  cursor: auto !important;
+}
+
+.logout-compact {
+  text-align: center;
+  padding: var(--gm-padding);
+  transition: all 0.4s ease-in-out;
+}
+
+.logout-compact:hover {
+  background-color: var(--btn-second);
+}
+
+.logout-compact a span {
+  font-size: 24px;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* ESTILOS PARA LA SECTION DE EL HEADER */
+/*-------------------------------------------------------------------------------------------*/
+header .header-tools {
+  background-color: var(--secondary-color);
+  border-bottom: solid 1px var(--gm-border-color);
+  padding: var(--gm-padding);
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+}
+
+header .header-tools .search {
+  width: 20%;
+}
+
+header .header-tools .search .search-input {
+  width: 100%;
+  padding: 6px 0px 6px 2px;
+  background-color: var(--gm-input-background-color);
+  box-shadow: 0 0 5px var(--primary-color);
+  display: block;
+  box-sizing: border-box;
+  border-radius: var(--gm-border-radius);
+  border: solid 1px var(--gm-border-color);
+  color: var(--gm-input-color);
+}
+
+header .header-tools .search .search-input::placeholder {
+  color: var(--color-gray);
+}
+
+header .header-tools .tools {
+  width: 80%;
+}
+
+header .header-tools .tools ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: start;
+  align-items: baseline;
+}
+
+header .header-tools .tools ul li {
+  display: inline-block;
+  margin: 0 var(--gm-padding-xs);
+  align-items: baseline;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* ESTILOS PARA LA SECTION DE EL DATA TABLE */
+/*-------------------------------------------------------------------------------------------*/
+section .datatable-container {
+  background-color: var(--gm-background-color-container);
+  border-radius: var(--gm-border-radius);
+  color: var(--gm-text-color);
+  width: 100%;
+  height: 510px;
+  overflow: auto;
+  margin: 0 auto;
+  font-size: 12px;
+}
+
+section .datatable-container::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+section .datatable-container::-webkit-scrollbar-thumb {
+  background-color: var(--gm-bg-color);
+  border-radius: 5px;
+}
+
+section .datatable-container .datatable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+section .datatable-container .datatable,
+section .datatable-container .datatable th,
+section .datatable-container .datatable td {
+  padding: var(--gm-padding);
+}
+
+section .datatable-container .datatable th {
+  background-color: var(--hightlight-color);
+  font-weight: bold;
+  text-align: left;
+  border-bottom: solid 1px var(--gm-border-color);
+}
+
+section .datatable-container .datatable td {
+  border-bottom: 1px solid var(--gm-border-color);
+}
+
+section .datatable-container .datatable tr:nth-child(even) {
+  background-color: var(--gm-even-row-color);
+}
+
+section .datatable-container .datatable tr:hover {
+  background-color: var(--gm-hover-cell-color);
+}
+
+section.perfil-user {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-cpanl);
+  color: var(--gm-text-color-dark);
+}
+
+section.perfil-user .information-cpanel {
+  text-align: center;
+  padding: 16px;
+}
+
+section.perfil-user .information-cpanel h1 {
+  font-size: 24px;
+  color: var(--secondary-color);
+}
+
+.perfil-box {
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+}
+
+section.edit-info-perfil {
+  border: 1px solid var(--color-gray);
+  position: relative;
+  width: 60%;
+  height: 350px;
+  background-color: var(--bg-form);
+  margin-right: 10px;
+}
+
+section.edit-info-perfil span {
+  padding: var(--gm-padding);
+  position: relative;
+  right: 0.5%;
+  font-weight: bold;
+  top: 3%;
+  border-right: 1px solid var(--color-gray);
+  border-bottom: 1px solid var(--color-gray);
+  background-color: var(--bg-cpanl);
+}
+
+section.edit-info-perfil form {
+  padding: var(--gm-padding);
+}
+
+section.edit-info-perfil form .form-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px;
+}
+
+section.edit-info-perfil form .form-control label {
+  color: var(--secondary-color);
+}
+
+section.edit-info-perfil form .form-control input {
+  width: 80%;
+  display: block;
+  padding: var(--gm-padding-s);
+}
+
+#email-input {
+  border: none;
+}
+
+section.edit-info-perfil form .form-control button {
+  padding: var(--gm-padding);
+  background-color: var(--btn-primary);
+  color: var(--gm-text-color);
+  font-size: 16px;
+  width: 100%;
+  text-transform: uppercase;
+  border-style: none;
+  cursor: pointer;
+  border-radius: var(--gm-border-radius);
+}
+
+section.upload-pic-perfil {
+  width: 40%;
+  height: 500px;
+  border: 1px solid var(--color-gray);
+  position: relative;
+  background-color: var(--bg-form);
+}
+
+section.upload-pic-perfil span {
+  padding: var(--gm-padding);
+  background-color: var(--bg-cpanl);
+  position: relative;
+  right: 0.5%;
+  top: 2%;
+
+  border-top: none;
+  border-left: none;
+  font-weight: bold;
+}
+
+section.upload-pic-perfil .avatar-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+section.upload-pic-perfil .avatar-section .avatar-pic {
+  width: 130px;
+  height: 130px;
+  background-color: var(--bg-cpanl);
+  border: 1px solid var(--gm-background-color-container);
+  border-radius: var(--gm-border-radius);
+}
+
+section.upload-pic-perfil .avatar-section .avatar-pic img {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+section.upload-pic-perfil .avatar-section .avatar-pic {
+  border-radius: var(--gm-border-radius);
+}
+
+section.upload-pic-perfil .avatar-section .upload-pic {
+  padding: var(--gm-padding-s);
+}
+
+section.upload-pic-perfil .avatar-section .upload-pic form .form-picture {
+  display: block;
+  width: 100%;
+}
+
+section.upload-pic-perfil .avatar-section .upload-pic form .form-picture input {
+  padding: var(--gm-padding-s) var(--gm-padding);
+  font-size: 16px;
+}
+
+section.upload-pic-perfil
+  .avatar-section
+  .upload-pic
+  form
+  .form-picture
+  input::placeholder {
+  color: var(--color-gray);
+}
+
+section.upload-pic-perfil .avatar-section .upload-pic form .form-picture label {
+  background-color: var(--btn-disable);
+  padding: var(--gm-padding-s) var(--gm-padding);
+  color: var(--gm-text-color);
+  font-size: 18px;
+  border-radius: var(--gm-border-radius);
+  cursor: pointer;
+}
+
+section.upload-pic-perfil
+  .avatar-section
+  .upload-pic
+  form
+  .form-picture
+  label:hover {
+  background-color: var(--btn-second);
+}
+
+section.upload-pic-perfil .avatar-section .upload-pic form .form-picture span {
+  background-color: transparent;
+  padding: 0;
+}
+
+progress {
+  margin: 16px auto;
+  display: block;
+  width: 100%;
+}
+
+section.upload-pic-perfil .avatar-section .upload-pic form input:last-child {
+  width: 100%;
+  padding: var(--gm-padding-s) var(--gm-padding);
+  background-color: var(--hightlight-color);
+  color: var(--gm-text-color);
+  text-transform: uppercase;
+  border-radius: var(--gm-border-radius);
+  border: none;
+  cursor: pointer;
+}
+
+.section-completperfil {
+  width: 90%;
+}
+
+.section-completperfil p span {
+  background-color: transparent;
+  color: var(--btn-second);
+  padding: 6px;
+  border: none;
+}
+
+.section-completperfil .progress-box {
+  position: relative;
+  background-color: var(--color-gray);
+  width: 100%;
+  height: 20px;
+  margin-top: 8px;
+}
+
+.section-completperfil .progress-box .progress {
+  width: 50%;
+  height: 100%;
+  background-color: var(--hightlight-color);
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* ESTILOS PARA LA SECTION DE EL FOOTER */
+/*-------------------------------------------------------------------------------------------*/
+footer .footer-tools {
+  background-color: var(--gm-background-color-container);
+  padding: var(--gm-padding);
+  display: flex;
+  align-items: baseline;
+}
+
+footer .footer-tools .list-items {
+  width: 50%;
+}
+
+footer .footer-tools .pages {
+  margin-left: auto;
+  margin-right: 0;
+  width: 50%;
+}
+
+footer .footer-tools .pages ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+
+footer .footer-tools .pages ul li {
+  display: inline-block;
+  margin: 0 var(--gm-padding-xs);
+}
+
+/* SECTION FOR MEDIA QUERY RESPONSIVE */
+@media (max-width: 480px) {
+  body {
+    display: block;
+  }
+  header.menu-header {
+    width: 100%;
+  }
+  section.menu-left-mobil {
+    width: 100% !important;
+  }
+  section.menu-compact nav.compact-nav {
+    width: 100%;
+  }
+  section.menu-compact nav ul li {
+    display: inline-block;
+    border-left: 1px solid var(--gm-background-color-container);
+  }
+  .initial-user {
+    padding: var(--gm-padding);
+    display: block !important;
+    background-color: #fff;
+  }
+  header .header-tools {
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+  header .header-tools .tools {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  header .header-tools .tools ul {
+    text-align: center;
+    display: block;
+  }
+  header .header-tools .search {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+  }
+  footer .footer-tools {
+    align-items: center;
+  }
+  footer .footer-tools .list-items span {
+    display: none;
+  }
+
+  .perfil-box {
+    display: block;
+  }
+  section.edit-info-perfil {
+    width: 100%;
+  }
+  section.upload-pic-perfil {
+    width: 100%;
+    margin-top: 16px;
+  }
+  section.perfil-user {
+    height: 100%;
+  }
+  section.upload-pic-perfil
+    .avatar-section
+    .upload-pic
+    form
+    .form-picture
+    input {
+    display: block;
+    width: 100%;
+  }
+
+  section.upload-pic-perfil
+    .avatar-section
+    .upload-pic
+    form
+    .form-picture
+    label {
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+  }
+  .btn-edit {
+    display: inline-block;
+  }
+  .btn-delet {
+    display: inline-block;
+  }
+  .list-genero__games {
+    width: 221px;
+  }
+  .title__game {
+    display: block;
+    width: 200px;
+  }
+  .action-btn {
+    width: 103px;
+    display: block;
+  }
+}

@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil | Admin</title>
+  <!-- FUENTES DE GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <!-- ICONOS DE GOOGLE MATERIAL ICON -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <!-- ESTILOS CSS PERSONAL -->
+  <link rel="stylesheet" href="../css/perfil.css" />
+</head>
+
+<body>
+  <section class="menu-left menu-left-mobil">
+    <header class="menu-header">
+      <div class="user-pic">
+        <img src="../static/img/user-developer/foto2x2.jpg" alt="" />
+      </div>
+      <div class="information-user">
+        <p>Welcome: <span>Administrator</span></p>
+        <p>Name: <span>Geromi Ant Lopez Martinez</span></p>
+        <div class="links-menu">
+          <a href="../../index.html" class="btn btn-second">
+            <span class="material-icons">home</span></a>
+          <a id="hide-navbar" class="btn btn-primary">
+            <span class="material-icons">visibility_off</span></a>
+        </div>
+      </div>
+    </header>
+    <nav class="user-menu">
+      <ul>
+        <li>
+          <a id="desploy-menu">
+            Administrator
+            <span class="material-icons"> expand_more </span>
+          </a>
+          <ul class="desply-menu">
+            <li class="cpanel-submenu">
+              <a id="cpanel-submenu">
+                Games cPanel
+                <span class="material-icons"> expand_more </span>
+                <ul class="cpanel-game">
+                  <li>
+                    <a class="games-information" id="games-information">
+                      Games Information
+                      <span class="material-icons"> visibility </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="category" id="category">
+                      Category <span class="material-icons"> visibility </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="game-collection" id="game-collection">
+                      Game Collection
+                      <span class="material-icons"> visibility </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="active-ads" id="active-ads">
+                      Active ADS
+                      <span class="material-icons"> visibility </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="version" id="version">
+                      Versión <span class="material-icons"> visibility </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="year" id="year">
+                      Year <span class="material-icons"> visibility </span>
+                    </a>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <li class="game-submenu">
+              <a id="game-submenu">
+                Add Manager
+                <span class="material-icons"> expand_more </span>
+                <ul class="add-game">
+                  <li>
+                    Add Game Information
+                    <span class="material-icons"> add </span>
+                  </li>
+                  <li>
+                    Add Category <span class="material-icons"> add </span>
+                  </li>
+                  <li>
+                    Add Game Collection
+                    <span class="material-icons"> add </span>
+                  </li>
+                  <li>Add ADS <span class="material-icons"> add </span></li>
+                  <li>
+                    Add Versión <span class="material-icons"> add </span>
+                  </li>
+                  <li>Add Year <span class="material-icons"> add </span></li>
+                </ul>
+              </a>
+            </li>
+            <li class="user-submenu">
+              <a id="user-submenu">
+                User Manager
+                <span class="material-icons"> expand_more </span>
+                <ul class="user-game">
+                  <li>
+                    <a class="list-user" id="list-user">
+                      List Users
+                      <span class="material-icons"> group </span>
+                    </a>
+                  </li>
+                  <li>
+                    Tipe User
+                    <span class="material-icons"> manage_accounts</span>
+                  </li>
+                </ul>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p id="perfil-li">
+            Perfil
+            <span class="material-icons"> switch_account </span>
+          </p>
+        </li>
+      </ul>
+    </nav>
+    <div class="cerrar-sesion">
+      <a href="" class="btn btn-primary">Logout <span class="material-icons">logout</span></a>
+    </div>
+    <section class="menu-compact">
+      <nav class="compact-nav">
+        <ul>
+          <li class="initial-user">GL</li>
+          <li>
+            <a href="../../index.html"><span class="material-icons">home</span></a>
+          </li>
+          <li id="games__icons__compact"><span class="material-icons"> sports_esports </span></li>
+          <li id="add__games__new"><span class="material-icons"> add_to_queue </span></li>
+          <li id="person_perfil"><span class="material-icons"> person_search </span></li>
+          <li id="account_user"><span class="material-icons"> account_box </span></li>
+          <li id="show-navbar">
+            <span class="material-icons"> visibility </span>
+          </li>
+        </ul>
+      </nav>
+      <div class="logout-compact">
+        <a href=""><span class="material-icons">logout</span></a>
+      </div>
+    </section>
+  </section>
+  <section class="menu-right" id="menu-right">
+
+    <!-- GAMES INFORMATION CONTROL (ADMINISTRATOR) -->
+    <section class="game-info-section" id="#game__info_section">
+      <header class="header-h">
+        <div class="header-tools">
+          <div class="tools">
+            <h2>Games information</h2>
+          </div>
+          <div class="search">
+            <input type="text" name="" class="search-input" placeholder="Search..." />
+          </div>
+        </div>
+      </header>
+      <section class="user-data">
+        <!--       <section class="menu-perfil">
+            <h2>Menu</h2>
+          </section> -->
+        <section class="data-perfil">
+          <div class="user-manager"></div>
+          <div class="datatable-container">
+            <table class="datatable">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>géneros</th>
+                  <th>Fecha</th>
+                  <th>Plataforma</th>
+                  <th>Versión</th>
+                  <th>Tamaño</th>
+                  <th>Crack</th>
+                  <th>Vistas</th>
+                  <th>Opción </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    1
+                  </td>
+                  <td><span class="title__game">Horizon Zero Dawn Complete Edition</span></td>
+                  <td>
+                    <ul class="list-genero__games">
+                      <li>Acción</li>
+                      <li>Aventura</li>
+                      <li>Mundo Abierto</li>
+                      <li>Rol</li>
+                    </ul>
+                  </td>
+                  <td>09/12/20</td>
+                  <td>PC</td>
+                  <td>ISO ElAmigos</td>
+                  <td>64,4 GB</td>
+                  <td>CODEX</td>
+                  <td>7601</td>
+                  <td class="action-btn">
+                    <a href="" class="btn btn-edit"><span class="material-icons">
+                        create
+                      </span></a>
+                    <a href="" class="btn btn-delet"><span class="material-icons">
+                        delete
+                      </span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-checkbox">
+                    1
+                  </td>
+                  <td>Horizon Zero Dawn Complete Edition</span></td>
+                  <td>
+                    <ul class="list-genero__games">
+                      <li>Acción</li>
+                      <li>Aventura</li>
+                      <li>Mundo Abierto</li>
+                      <li>Rol</li>
+                    </ul>
+                  </td>
+                  <td>09/12/20</td>
+                  <td>PC</td>
+                  <td>ISO ElAmigos</td>
+                  <td>64,4 GB</td>
+                  <td>CODEX</td>
+                  <td>7601</td>
+                  <td>
+                    <a href="" class="btn btn-edit"><span class="material-icons">
+                        create
+                      </span></a>
+                    <a href="" class="btn btn-delet"><span class="material-icons">
+                        delete
+                      </span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-checkbox">
+                    1
+                  </td>
+                  <td>Horizon Zero Dawn Complete Edition</span></td>
+                  <td>
+                    <ul class="list-genero__games">
+                      <li>Acción</li>
+                      <li>Aventura</li>
+                      <li>Mundo Abierto</li>
+                      <li>Rol</li>
+                    </ul>
+                  </td>
+                  <td>09/12/20</td>
+                  <td>PC</td>
+                  <td>ISO ElAmigos</td>
+                  <td>64,4 GB</td>
+                  <td>CODEX</td>
+                  <td>7601</td>
+                  <td>
+                    <a href="" class="btn btn-edit"><span class="material-icons">
+                        create
+                      </span></a>
+                    <a href="" class="btn btn-delet"><span class="material-icons">
+                        delete
+                      </span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-checkbox">
+                    1
+                  </td>
+                  <td>Horizon Zero Dawn Complete Edition</span></td>
+                  <td>
+                    <ul class="list-genero__games">
+                      <li>Acción</li>
+                      <li>Aventura</li>
+                      <li>Mundo Abierto</li>
+                      <li>Rol</li>
+                    </ul>
+                  </td>
+                  <td>09/12/20</td>
+                  <td>PC</td>
+                  <td>ISO ElAmigos</td>
+                  <td>64,4 GB</td>
+                  <td>CODEX</td>
+                  <td>7601</td>
+                  <td>
+                    <a href="" class="btn btn-edit"><span class="material-icons">
+                        create
+                      </span></a>
+                    <a href="" class="btn btn-delet"><span class="material-icons">
+                        delete
+                      </span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-checkbox">
+                    1
+                  </td>
+                  <td>Horizon Zero Dawn Complete Edition</span></td>
+                  <td>
+                    <ul class="list-genero__games">
+                      <li>Acción</li>
+                      <li>Aventura</li>
+                      <li>Mundo Abierto</li>
+                      <li>Rol</li>
+                    </ul>
+                  </td>
+                  <td>09/12/20</td>
+                  <td>PC</td>
+                  <td>ISO ElAmigos</td>
+                  <td>64,4 GB</td>
+                  <td>CODEX</td>
+                  <td>7601</td>
+                  <td>
+                    <a href="" class="btn btn-edit"><span class="material-icons">
+                        create
+                      </span></a>
+                    <a href="" class="btn btn-delet"><span class="material-icons">
+                        delete
+                      </span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-checkbox">
+                    1
+                  </td>
+                  <td>Horizon Zero Dawn Complete Edition</span></td>
+                  <td>
+                    <ul class="list-genero__games">
+                      <li>Acción</li>
+                      <li>Aventura</li>
+                      <li>Mundo Abierto</li>
+                      <li>Rol</li>
+                    </ul>
+                  </td>
+                  <td>09/12/20</td>
+                  <td>PC</td>
+                  <td>ISO ElAmigos</td>
+                  <td>64,4 GB</td>
+                  <td>CODEX</td>
+                  <td>7601</td>
+                  <td>
+                    <a href="" class="btn btn-edit"><span class="material-icons">
+                        create
+                      </span></a>
+                    <a href="" class="btn btn-delet"><span class="material-icons">
+                        delete
+                      </span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-checkbox">
+                    1
+                  </td>
+                  <td>Horizon Zero Dawn Complete Edition</span></td>
+                  <td>
+                    <ul class="list-genero__games">
+                      <li>Acción</li>
+                      <li>Aventura</li>
+                      <li>Mundo Abierto</li>
+                      <li>Rol</li>
+                    </ul>
+                  </td>
+                  <td>09/12/20</td>
+                  <td>PC</td>
+                  <td>ISO ElAmigos</td>
+                  <td>64,4 GB</td>
+                  <td>CODEX</td>
+                  <td>7601</td>
+                  <td>
+                    <a href="" class="btn btn-edit"><span class="material-icons">
+                        create
+                      </span></a>
+                    <a href="" class="btn btn-delet"><span class="material-icons">
+                        delete
+                      </span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-checkbox">
+                    1
+                  </td>
+                  <td>Horizon Zero Dawn Complete Edition</span></td>
+                  <td>
+                    <ul class="list-genero__games">
+                      <li>Acción</li>
+                      <li>Aventura</li>
+                      <li>Mundo Abierto</li>
+                      <li>Rol</li>
+                    </ul>
+                  </td>
+                  <td>09/12/20</td>
+                  <td>PC</td>
+                  <td>ISO ElAmigos</td>
+                  <td>64,4 GB</td>
+                  <td>CODEX</td>
+                  <td>7601</td>
+                  <td>
+                    <a href="" class="btn btn-edit"><span class="material-icons">
+                        create
+                      </span></a>
+                    <a href="" class="btn btn-delet"><span class="material-icons">
+                        delete
+                      </span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-checkbox">
+                    1
+                  </td>
+                  <td>Horizon Zero Dawn Complete Edition</span></td>
+                  <td>
+                    <ul class="list-genero__games">
+                      <li>Acción</li>
+                      <li>Aventura</li>
+                      <li>Mundo Abierto</li>
+                      <li>Rol</li>
+                    </ul>
+                  </td>
+                  <td>09/12/20</td>
+                  <td>PC</td>
+                  <td>ISO ElAmigos</td>
+                  <td>64,4 GB</td>
+                  <td>CODEX</td>
+                  <td>7601</td>
+                  <td>
+                    <a href="" class="btn btn-edit"><span class="material-icons">
+                        create
+                      </span></a>
+                    <a href="" class="btn btn-delet"><span class="material-icons">
+                        delete
+                      </span></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="table-checkbox">
+                    1
+                  </td>
+                  <td>Horizon Zero Dawn Complete Edition</span></td>
+                  <td>
+                    <ul class="list-genero__games">
+                      <li>Acción</li>
+                      <li>Aventura</li>
+                      <li>Mundo Abierto</li>
+                      <li>Rol</li>
+                    </ul>
+                  </td>
+                  <td>09/12/20</td>
+                  <td>PC</td>
+                  <td>ISO ElAmigos</td>
+                  <td>64,4 GB</td>
+                  <td>CODEX</td>
+                  <td>7601</td>
+                  <td>
+                    <a href="" class="btn btn-edit"><span class="material-icons">
+                        create
+                      </span></a>
+                    <a href="" class="btn btn-delet"><span class="material-icons">
+                        delete
+                      </span></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <footer>
+          <div class="footer-tools">
+            <div class="list-items">
+              <span>Mostrar</span>
+              <select name="n-entries" id="n-entries" class="n-entries">
+                <option value="20">20</option>
+                <option value="10" selected>10</option>
+                <option value="25">25</option>
+              </select>
+              <span>entradas</span>
+            </div>
+            <div class="pages">
+              <ul>
+                <li><span class="active">1</span></li>
+                <li><button>2</button></li>
+                <li><button>3</button></li>
+                <li><button>4</button></li>
+                <li><span>...</span></li>
+                <li><button>9</button></li>
+                <li><button>10</button></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </section><!-- CLOSE USUARIO CPANEL CONTROL -->
+
+    <!-- PERFIL USUARIO INFORMATION -->
+    <section class="perfil-user">
+      <div class="information-cpanel">
+        <h1>Perfil de usuario</h1>
+      </div>
+      <div class="perfil-box" id="perfil">
+        <section class="edit-info-perfil">
+          <span>Cuenta</span>
+          <form action="">
+            <div class="form-control">
+              <label for="username">Usuario:</label>
+              <input type="text" placeholder="Username..." value="geromylopez03" />
+            </div>
+            <div class="form-control">
+              <label for="name">Nombre:</label>
+              <input type="text" placeholder="Name..." value="Geromi Ant" />
+            </div>
+            <div class="form-control">
+              <label for="lasName">Apellidos</label>
+              <input type="text" placeholder="Last Name..." value="Lopéz Martínez" />
+            </div>
+            <div class="form-control">
+              <label for="email">Correo:</label>
+              <input type="email" placeholder="E-mail..." value="geromiantoniolopezmartinez@gmail.com" id="email-input"
+                readonly />
+            </div>
+            <div class="form-control">
+              <button type="submit">Actualizar</button>
+            </div>
+          </form>
+        </section>
+        <section class="upload-pic-perfil">
+          <span>Mi Avatar</span>
+          <div class="avatar-section">
+            <div class="avatar-pic">
+              <img src="../static/img/user-developer/foto2x23.jpg" alt="" />
+            </div>
+            <div class="upload-pic">
+              <form action="" method="POST" enctype="multipart/form-data">
+                <div class="form-picture">
+                  <input type="text" name="shownamefile" placeholder="Ningún archivo selecionado" id="shownamefile"
+                    readonly />
+                  <label for="inputfile">Subir <span class="material-icons">
+                      camera_enhance
+                    </span></label>
+                </div>
+                <input type="file" name="inputfile" id="inputfile" accept="image/png, .jpeg, .jpg, image/gif" hidden>
+                <progress value="0" max="100"></progress>
+                <input type="submit" value="Cargar Avatar">
+              </form>
+            </div>
+            <div class="section-completperfil">
+              <p>Perfil completado al <span>50%</span></p>
+              <div class="progress-box">
+                <div class="progress"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section><!-- CLOSE PERFIL USUARIO INFORMATION -->
+
+    <!-- USUARIO CPANEL CONTROL (ADMINISTRATOR) -->
+    <section class="usuarios-cpanel">
+      <header class="header-h">
+        <div class="header-tools">
+          <div class="tools">
+            <ul>
+              <li>
+                <span><input type="checkbox" /></span>
+              </li>
+              <li>
+                <button>
+                  <i class="material-icons">add_circle</i>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <i class="material-icons">edit</i>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <i class="material-icons">delete</i>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <i class="material-icons">share</i>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="search">
+            <input type="text" name="" class="search-input" placeholder="Search..." />
+          </div>
+        </div>
+      </header>
+      <section class="user-data">
+        <!--       <section class="menu-perfil">
+        <h2>Menu</h2>
+      </section> -->
+        <section class="data-perfil">
+          <div class="user-manager"></div>
+          <div class="datatable-container">
+            <table class="datatable">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Status</th>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Office</th>
+                  <th>Age</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="table-checkbox">
+                    <input type="checkbox" name="" id="" />
+                  </td>
+                  <td><span class="avalible"></span></td>
+                  <td>Marcos Rivas</td>
+                  <td>CEO</td>
+                  <td>San Francisco</td>
+                  <td>28</td>
+                  <td>2020/05/01</td>
+                </tr>
+                <tr>
+                  <td class="table-checkbox">
+                    <input type="checkbox" name="" id="" />
+                  </td>
+                  <td><span class="avalible"></span></td>
+                  <td>Marcos Rivas</td>
+                  <td>CEO</td>
+                  <td>San Francisco</td>
+                  <td>28</td>
+                  <td>2020/05/01</td>
+                </tr>
+                <tr>
+                  <td class="table-checkbox">
+                    <input type="checkbox" name="" id="" />
+                  </td>
+                  <td><span class="away"></span></td>
+                  <td>Carlos Rivas</td>
+                  <td>Web Developer</td>
+                  <td>San Francisco</td>
+                  <td>34</td>
+                  <td>2020/05/01</td>
+                </tr>
+                <tr>
+                  <td class="table-checkbox">
+                    <input type="checkbox" name="" id="" />
+                  </td>
+                  <td><span class="offline"></span></td>
+                  <td>Marcos Rivas</td>
+                  <td>Sofware</td>
+                  <td>San Francisco</td>
+                  <td>24</td>
+                  <td>2020/05/01</td>
+                </tr>
+                <tr>
+                  <td class="table-checkbox">
+                    <input type="checkbox" name="" id="" />
+                  </td>
+                  <td><span class="avalible"></span></td>
+                  <td>Marcos Rivas</td>
+                  <td>CEO</td>
+                  <td>San Francisco</td>
+                  <td>28</td>
+                  <td>2020/05/01</td>
+                </tr>
+                <tr>
+                  <td class="table-checkbox">
+                    <input type="checkbox" name="" id="" />
+                  </td>
+                  <td><span class="avalible"></span></td>
+                  <td>Marcos Rivas</td>
+                  <td>CEO</td>
+                  <td>San Francisco</td>
+                  <td>28</td>
+                  <td>2020/05/01</td>
+                </tr>
+                <tr>
+                  <td class="table-checkbox">
+                    <input type="checkbox" name="" id="" />
+                  </td>
+                  <td><span class="avalible"></span></td>
+                  <td>Marcos Rivas</td>
+                  <td>CEO</td>
+                  <td>San Francisco</td>
+                  <td>28</td>
+                  <td>2020/05/01</td>
+                </tr>
+                <tr>
+                  <td class="table-checkbox">
+                    <input type="checkbox" name="" id="" />
+                  </td>
+                  <td><span class="avalible"></span></td>
+                  <td>Marcos Rivas</td>
+                  <td>CEO</td>
+                  <td>San Francisco</td>
+                  <td>28</td>
+                  <td>2020/05/01</td>
+                </tr>
+                <tr>
+                  <td class="table-checkbox">
+                    <input type="checkbox" name="" id="" />
+                  </td>
+                  <td><span class="avalible"></span></td>
+                  <td>Marcos Rivas</td>
+                  <td>CEO</td>
+                  <td>San Francisco</td>
+                  <td>28</td>
+                  <td>2020/05/01</td>
+                </tr>
+                <tr>
+                  <td class="table-checkbox">
+                    <input type="checkbox" name="" id="" />
+                  </td>
+                  <td><span class="avalible"></span></td>
+                  <td>Marcos Rivas</td>
+                  <td>CEO</td>
+                  <td>San Francisco</td>
+                  <td>28</td>
+                  <td>2020/05/01</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <footer>
+          <div class="footer-tools">
+            <div class="list-items">
+              <span>Mostrar</span>
+              <select name="n-entries" id="n-entries" class="n-entries">
+                <option value="20">20</option>
+                <option value="10" selected>10</option>
+                <option value="25">25</option>
+              </select>
+              <span>entradas</span>
+            </div>
+            <div class="pages">
+              <ul>
+                <li><span class="active">1</span></li>
+                <li><button>2</button></li>
+                <li><button>3</button></li>
+                <li><button>4</button></li>
+                <li><span>...</span></li>
+                <li><button>9</button></li>
+                <li><button>10</button></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </section><!-- CLOSE USUARIO CPANEL CONTROL -->
+
+
+  </section>
+  <!-- LIBRERIA DE JQUERY -->
+  <script src="../js/jquery-3.5.1.js"></script>
+  <!-- JAVASCRIPT PERSONAL  -->
+  <script src="../js/perfil.js"></script>
+</body>
+
+</html>
